@@ -332,7 +332,7 @@ The current configuration is optimized for **quick CPU demonstration**.
 ## 👨‍💻 Author
 
 **Batch-8 GAN for Images**
-B.Tech — Generative AI & Machine Learning
+B.Tech — AI for Computational Intelligence
 Academic Year: 2025–26
 
 ---
