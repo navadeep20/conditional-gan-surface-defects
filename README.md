@@ -235,6 +235,99 @@ streamlit run src/app_surface_cgan.py
 * Real-time camera integration
 
 ---
+## ⚡ Quick Start (Run in Under 3 Minutes)
+
+Follow these steps to reproduce the project locally.
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/navadeep20/conditional-gan-surface-defects.git
+cd conditional-gan-surface-defects
+```
+
+---
+
+### 2️⃣ Create virtual environment
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+*(Mac/Linux users: `source venv/bin/activate`)*
+
+---
+
+### 3️⃣ Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 4️⃣ Prepare demo dataset (recommended first run)
+
+This project includes a lightweight demo data generator so the pipeline can run without external datasets.
+
+```bash
+python src/prepare_demo_dataset.py
+```
+
+This will automatically create:
+
+* `data/raw/` with sample images
+* class-wise folder structure
+
+---
+
+### 5️⃣ Train the conditional GAN
+
+```bash
+python -m src.train_cgan_surface
+```
+
+This generates:
+
+* trained checkpoints
+* sample images
+
+---
+
+### 6️⃣ Launch the web app
+
+```bash
+streamlit run src/app_surface_cgan.py
+```
+
+Open browser:
+
+```
+http://localhost:8501
+```
+
+---
+
+## ✅ Expected Output
+
+After setup, you should be able to:
+
+* Generate synthetic defect images
+* Visualize results in the web UI
+* Download generated samples
+
+---
+
+## 🧪 Reproducibility Note
+
+For best image quality:
+
+* Train GAN for **50–100 epochs**
+* Use a real industrial defect dataset
+* Enable GPU if available
+
+The current configuration is optimized for **quick CPU demonstration**.
 
 ## 👨‍💻 Author
 
